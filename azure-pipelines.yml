@@ -29,14 +29,14 @@ jobs:
       command: build
       projects: '**/*.csproj'
 
-  - bash: |
-      tests=($(dotnet test . --no-build --list-tests | grep Test_))
-      . 'create_slicing_filter_condition.sh' $tests
-    displayName: 'Create slicing filter condition'
+  # - bash: |
+  #     tests=($(dotnet test . --no-build --list-tests | grep Test_))
+  #     . 'create_slicing_filter_condition.sh' $tests
+  #   displayName: 'Create slicing filter condition'
   
-  - bash: |
-      echo "Slicing filter condition: $(targetTestsFilter)"
-    displayName: 'Echo slicing filter condition'
+  # - bash: |
+  #     echo "Slicing filter condition: $(targetTestsFilter)"
+  #   displayName: 'Echo slicing filter condition'
 
   - task: DotNetCoreCLI@2
     displayName: Test
