@@ -9,7 +9,6 @@ echo "Total agents: $totalAgents"
 echo "Agent number: $agentNumber"
 echo "Total tests: $testCount"
 echo "Target tests:"
-#for ((i=$agentNumber; i <= $testCount;i=$((i+$totalAgents)))); do
 targetTestName=${tests[$i -1]}
 echo "$targetTestName"
 filter+="|${filterProperty}=${targetTestName}"
