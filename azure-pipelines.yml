@@ -13,7 +13,7 @@ jobs:
     name: 'default'
     vmImage: 'BESTLYMHOME'
   strategy:
-    parallel: 5
+    parallel: 1
   displayName: Run tests in parallel
 
   steps:
